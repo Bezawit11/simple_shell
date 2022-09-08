@@ -13,7 +13,7 @@ char **parse_line(char *buffer)
 {
 int i = 0, size = 64;
 char *tok;
-char **tokenp = malloc(size * sizeof(char*)); 
+char **tokenp = malloc(size * sizeof(char *));
 if (tokenp == NULL)
 {
 exit(EXIT_FAILURE);
