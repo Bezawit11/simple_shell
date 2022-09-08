@@ -6,9 +6,9 @@
 char **environ;
 
 /**
- *
- *
- *
+ *execute - executes commands
+ *@tokenz: a NULL terminated double pointer
+ *Return: returns
  */
 int execute(char **tokenz)
 
