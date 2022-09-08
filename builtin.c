@@ -3,8 +3,9 @@
 #include "main.h"
 
 /**
- *
- *
+ *check_builtin - checks for builtin commands
+ *@tokenz: double pointer to tokenization
+ *Return: returns intgers
  */
 int check_builtin(char **tokenz)
 
