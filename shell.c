@@ -6,8 +6,8 @@
 #include "main.h"
 
 /**
- *
- *
+ *main - simple shell
+ *Return: returns 1 on success
  */
 int main(void)
 
@@ -22,7 +22,6 @@ p = isatty(STDIN_FILENO);
 buffer = readcmd(buffer);
 tokenz = parse_line(buffer);
 c = check_builtin(tokenz);
-/*printf("%s", tokenz[0]);*/
 if (c == 0)
 break;
 if (c == 1)
@@ -31,7 +30,6 @@ free(buffer);
 free(tokenz);
 continue;
 }
-/*execute(tokenz);*/
 pid = fork();
 if (pid == 0)
 {
