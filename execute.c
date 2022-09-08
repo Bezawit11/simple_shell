@@ -3,7 +3,6 @@
 #include <sys/wait.h>
 #include <unistd.h>
 #include <sys/types.h>
-char **environ;
 
 /**
  *execute - executes commands
