@@ -2,15 +2,15 @@
 #include "main.h"
 
 /**
- *
- *
+ *readcmd - reads input
+ *@command: input command
+ *Return: returns a pointer to the command
  */
 char *readcmd(char *command)
 
 {
 int l, p;
 size_t bufsize = 0;
-/*char *command = NULL;*/
 p = isatty(STDIN_FILENO);
 if (p == 1)
 {
