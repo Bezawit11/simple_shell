@@ -16,23 +16,25 @@ if (p == 1)
 {
 write(1, " ($) ", 5);
 }
-/*if(*/
+/*if(
+ */
 getline(&command, &bufsize, stdin);
-/*== -1)
-{
-if (feof(stdin)) 
-{
-exit(EXIT_SUCCESS);
-}
-else  
-{
-perror("readline");
-exit(EXIT_FAILURE);
-}
-}*/
+/**== -1)
+ *{
+ *if (feof(stdin))
+ *{
+ *exit(EXIT_SUCCESS);
+ *}
+ *else
+ *{
+ *perror("readline");
+ *exit(EXIT_FAILURE);
+ *}
+ *}
+ */
 l = _strlen(command);
 l = l - 1;
-if (command[l] == '\n'|| command[l] == EOF)
+if (command[l] == '\n' || command[l] == EOF)
 {
 *(command + l) = '\0';
 }
