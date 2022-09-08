@@ -11,7 +11,7 @@ int check_builtin(char **tokenz)
 
 {
 int i, k, l;
-char* builtins[] = {"echo", "exit", "env", NULL};
+char *builtins[] = {"echo", "exit", "env", NULL};
 for (i = 0; i <= 2; i++)
 {
 k = _strcmp(tokenz[0], builtins[i]);
