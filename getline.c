@@ -5,12 +5,12 @@
  *
  *
  */
-char *readcmd()
+char *readcmd(char *command)
 
 {
 int l, p;
 size_t bufsize = 0;
-char *command = NULL;
+/*char *command = NULL;*/
 p = isatty(STDIN_FILENO);
 if (p == 1)
 {
@@ -32,7 +32,7 @@ exit(EXIT_FAILURE);
 }*/
 l = _strlen(command);
 l = l - 1;
-if (command[l] == '\n')
+if (command[l] == '\n'|| command[l] == EOF)
 {
 *(command + l) = '\0';
 }

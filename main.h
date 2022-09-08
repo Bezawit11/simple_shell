@@ -12,7 +12,7 @@
 #include <sys/stat.h>
 #include <signal.h>
 
-char *readcmd();
+char *readcmd(char *command);
 int _strlen(char *s);
 char **parse_line(char *buffer);
 int execute(char **token);
