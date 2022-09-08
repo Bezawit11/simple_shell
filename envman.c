@@ -3,9 +3,8 @@
 char **environ;
 
 /**
- *
- *
- *
+ *for_env - prints environment variables
+ *Return: void
  */
 void for_env()
 
