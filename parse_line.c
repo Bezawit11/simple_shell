@@ -4,8 +4,9 @@
 #include "main.h"
 
 /**
- *
- *
+ *parse_line - tokenization
+ *@buffer: command to be tokenized
+ *Return: returns a double poiner of tokenized command
  */
 char **parse_line(char *buffer)
 
