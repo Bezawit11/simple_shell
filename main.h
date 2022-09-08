@@ -14,6 +14,9 @@
 
 char *readcmd(char *command);
 int _strlen(char *s);
+void for_env();
+int check_builtin(char **tokenz);
+int _strcmp(char *s1, char *s2);
 char **parse_line(char *buffer);
 int execute(char **token);
 extern char **environ;
