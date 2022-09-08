@@ -21,6 +21,7 @@ while (h == 1)
 p = isatty(STDIN_FILENO);
 buffer = readcmd(buffer);
 tokenz = parse_line(buffer);
+/*printf("%s", tokenz[0]);*/
 /*execute(tokenz);*/
 pid = fork();
 if (pid == 0)

@@ -24,6 +24,6 @@ tokenp[i] = tok;
 tok = strtok(NULL, " ");
 i = i + 1;
 }
-tokenp[i] = NULL;  
+tokenp[i] = NULL;
 return (tokenp);
 }
