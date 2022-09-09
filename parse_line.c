@@ -18,11 +18,11 @@ if (tokenp == NULL)
 {
 exit(EXIT_FAILURE);
 }
-tok = strtok(buffer, " ");
+tok = _strtok(buffer, " ");
 while (tok != NULL)
 {
 tokenp[i] = tok;
-tok = strtok(NULL, " ");
+tok = _strtok(NULL, " ");
 i = i + 1;
 }
 tokenp[i] = NULL;
