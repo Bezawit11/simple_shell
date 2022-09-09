@@ -3,7 +3,7 @@
 #include <sys/wait.h>
 #include <unistd.h>
 #include <sys/types.h>
-
+char **environ;
 /**
  *execute - executes commands
  *@tokenz: a NULL terminated double pointer
