@@ -5,9 +5,9 @@
  *
  *
  */
-char *truncate()
+char *spacetrunc()
 
 {
 printf("truncate");
-return (true);
+return ("true");
 }
