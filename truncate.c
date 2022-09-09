@@ -2,8 +2,8 @@
 #include "main.h"
 
 /**
- *
- *
+ *spacetrunc - truncates space
+ *Return: void
  */
 char *spacetrunc()
 
