@@ -1,6 +1,6 @@
 #include "main.h"
 #include <unistd.h>
-extern char **environ;
+
 /**
  *for_env - prints environment variables
  *Return: void
@@ -8,8 +8,7 @@ extern char **environ;
 void for_env(void)
 
 {
-int i, l;
-i = 0;
+int i = 0, l;
 while (environ[i] != NULL)
 {
 l = _strlen(environ[i]);

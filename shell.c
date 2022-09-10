@@ -46,5 +46,5 @@ free(tokenz);
 if (p != 1)
 h--;
 }
-return (1);
+return (0);
 }
