@@ -35,7 +35,7 @@ if (pid == 0)
 {
 if (execve(tokenz[0], tokenz, environ) == -1)
 perror("Error");
-exit(0);
+exit(1);
 }
 else if (pid < 0)
 perror("Error");
