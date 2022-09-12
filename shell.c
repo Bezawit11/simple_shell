@@ -22,8 +22,10 @@ p = isatty(STDIN_FILENO);
 buffer = readcmd(buffer);
 tokenz = parse_line(buffer);
 c = check_builtin(tokenz);
-if (c == 0)
-break;
+if (c == 0){
+free(buffer);
+free(tokenz);
+break;}
 if (c == 1)
 {
 free(buffer);
