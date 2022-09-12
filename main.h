@@ -19,7 +19,7 @@ char *_strtok(char *str, const char *delim);
 void for_env();
 int check_builtin(char **tokenz);
 int _strcmp(char *s1, char *s2);
-char **parse_line(char *buffer);
+char **parse_line(char *buffer, char **tokenz);
 int execute(char **token);
 extern char **environ;
 #endif
