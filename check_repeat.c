@@ -21,7 +21,7 @@ l++;
 }
 if (tokenz[i + 1] != NULL)
 {
-return (0);
+return (1);
 }
 else
 return (l + 1);
