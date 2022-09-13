@@ -11,8 +11,8 @@ int check_builtin(char **tokenz)
 
 {
 int i, k, l;
-char *builtins[] = {"echo", "exit", "env", NULL};
-for (i = 0; i <= 2; i++)
+char *builtins[] = {"echo", "exit", "env", " ", NULL};
+for (i = 0; i <= 3; i++)
 {
 k = _strcmp(tokenz[0], builtins[i]);
 if (k == 0)
@@ -20,8 +20,10 @@ if (k == 0)
 break;
 }
 }
-if (i == 3)
+if (i == 4)
 return (2);
+if (i == 3)
+return (1);
 if (i == 0)
 {
 l = _strlen(tokenz[1]);
