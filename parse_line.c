@@ -11,7 +11,7 @@
 char **parse_line(char *buffer, char **tokenz)
 
 {
-int i = 0, size = 64, j;
+int i = 0, size = 64, j, m;
 char *tok;
 tokenz = malloc(size * sizeof(char *));
 if (tokenz == NULL)
@@ -36,5 +36,8 @@ tok = strtok(NULL, " ");
 i = i + 1;
 }
 tokenz[i] = NULL;
+m = check_repeat(tokenz);
+if (m > 1){
+tokenz[1] = NULL;}
 return (tokenz);
 }
