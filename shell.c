@@ -12,8 +12,8 @@
 int main(void)
 
 {
-int h = 1, status, p, c, j, m = 0;
-char *buffer = NULL, char **tokenz;
+int h = 1, status, p, c, j, m;
+char *buffer = NULL, **tokenz;
 pid_t pid;
 while (h == 1)
 {
