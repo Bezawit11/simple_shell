@@ -11,12 +11,21 @@
 char **parse_line(char *buffer, char **tokenz)
 
 {
-int i = 0, size = 64;
+int i = 0, size = 64, j;
 char *tok;
 tokenz = malloc(size * sizeof(char *));
 if (tokenz == NULL)
 {
 exit(EXIT_FAILURE);
+}
+for (j = 0; buffer[j] != '\0'; j++)
+{
+if (buffer[j] != " ")
+break;
+}
+if (buffer[j] == '\0'){
+tokenz[0] = buffer;
+return (tokenz);
 }
 tok = strtok(buffer, " ");
 while (tok != NULL)
