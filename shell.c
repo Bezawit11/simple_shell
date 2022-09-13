@@ -12,15 +12,16 @@
 int main(void)
 
 {
-int h = 1, status, p, c, j, m;
+int h = 1, status, p, c, j, m = 1;
 char *buffer = NULL, **tokenz;
 pid_t pid;
 while (h == 1)
 {
 p = isatty(STDIN_FILENO);
 buffer = readcmd(buffer);
-tokenz = parse_line(buffer, tokenz);
-m = check_repeat(tokenz);
+if (p != 1){
+m = check_repeat(tokenz);}
+tokenz = parse_line(buffer, tokenz, m);
 c = check_builtin(tokenz);
 if (c == 0){
 free(buffer);
