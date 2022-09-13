@@ -24,7 +24,8 @@ if (buffer[j] != " ")
 break;
 }
 if (buffer[j] == '\0'){
-tokenz[0] = buffer;
+tokenz[0] = " ";
+tokenz[1] = NULL;
 return (tokenz);
 }
 tok = strtok(buffer, " ");
