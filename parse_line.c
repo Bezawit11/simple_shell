@@ -20,7 +20,7 @@ exit(EXIT_FAILURE);
 }
 for (j = 0; buffer[j] != '\0'; j++)
 {
-if (buffer[j] != " ")
+if (buffer[j] != ' ')
 break;
 }
 if (buffer[j] == '\0'){
