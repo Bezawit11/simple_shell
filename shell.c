@@ -20,6 +20,7 @@ while (h == 1)
 p = isatty(STDIN_FILENO);
 buffer = readcmd(buffer);
 tokenz = parse_line(buffer, tokenz);
+m = check_repeat(tokenz);
 c = check_builtin(tokenz);
 if (c == 0){
 free(buffer);
@@ -31,7 +32,7 @@ free(buffer);
 free(tokenz);
 continue;
 }
-for (j = 0; j <= m; j++)
+for (j = 0; j < m; j++)
 {
 pid = fork();
 if (pid == 0)
