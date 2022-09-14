@@ -12,7 +12,7 @@
 int main(void)
 
 {
-int h = 1, status, p, c, j, m = 1;
+int h = 1, status, p, c;
 char *buffer = NULL, **tokenz;
 pid_t pid;
 while (h == 1)
@@ -31,8 +31,6 @@ free(buffer);
 free(tokenz);
 continue;
 }
-for (j = 0; j < m; j++)
-{
 pid = fork();
 if (pid == 0)
 {
@@ -44,7 +42,6 @@ else if (pid < 0)
 perror("Error");
 else
 wait(&status);
-}
 free(buffer);
 free(tokenz);
 if (p != 1)
