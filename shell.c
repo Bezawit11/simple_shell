@@ -14,6 +14,7 @@ int main(void)
 {
 int h = 1, status, p, c;
 char *buffer = NULL, **tokenz;
+/*char ex[100];*/
 pid_t pid;
 while (h == 1)
 {
@@ -31,8 +32,6 @@ free(buffer);
 free(tokenz);
 continue;
 }
-if (*buffer != "/")
-strcat(tokenz[0], "/bin/");
 pid = fork();
 if (pid == 0)
 {
