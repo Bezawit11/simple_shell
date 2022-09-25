@@ -19,10 +19,14 @@ if (tokenz == NULL)
 {
 exit(EXIT_FAILURE);
 }
-strcpy(c, buffer);
 if (*c != '/')
 {
-strcat("/bin/", c);
+strcpy(c, "/bin/");
+strcat(c, buffer);
+}
+else
+{
+strcpy(c, buffer);
 }
 for (j = 0; c[j] != '\0'; j++)
 {
