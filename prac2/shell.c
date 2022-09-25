@@ -19,7 +19,7 @@ while (h == 1)
 {
 p = isatty(STDIN_FILENO);
 buffer = readcmd(buffer);
-tokenz = parse_line(buffer, tokenz, m);
+tokenz = parse_line(buffer, tokenz);
 c = check_builtin(tokenz);
 if (c == 0){
 free(buffer);
