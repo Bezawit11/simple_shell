@@ -8,12 +8,12 @@
  *@buffer: command to be tokenized
  *Return: returns a double poiner of tokenized command
  */
-char **parse_line(char *buffer, char **tokenz, char *c)
+char **parse_line(char *buffer, char **tokenz, char *n)
 
 {
 int i = 0, size = 64, j;
 char *tok;
-c = malloc(100);
+n = malloc(100);
 tokenz = malloc(size * sizeof(char *));
 if (tokenz == NULL)
 {
@@ -21,24 +21,24 @@ exit(EXIT_FAILURE);
 }
 if (*buffer != '/')
 {
-strcpy(c, "/bin/");
-strcat(c, buffer);
+strcpy(n, "/bin/");
+strcat(n, buffer);
 }
 else
 {
-strcpy(c, buffer);
+strcpy(n, buffer);
 }
-for (j = 0; c[j] != '\0'; j++)
+for (j = 0; n[j] != '\0'; j++)
 {
-if (c[j] != ' ')
+if (n[j] != ' ')
 break;
 }
-if (c[j] == '\0'){
+if (n[j] == '\0'){
 tokenz[0] = " ";
 tokenz[1] = NULL;
 return (tokenz);
 }
-tok = strtok(c, " ");
+tok = strtok(n, " ");
 while (tok != NULL)
 {
 tokenz[i] = tok;
