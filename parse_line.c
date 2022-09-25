@@ -11,7 +11,7 @@
 char **parse_line(char *buffer, char **tokenz, char *n)
 
 {
-int i = 0, size = 64, j;
+int i = 0, size = 64, j, r;
 char *tok;
 n = malloc(100);
 tokenz = malloc(size * sizeof(char *));
@@ -19,6 +19,7 @@ if (tokenz == NULL)
 {
 exit(EXIT_FAILURE);
 }
+r = 
 if (*buffer != '/')
 {
 strcpy(n, "/bin/");
