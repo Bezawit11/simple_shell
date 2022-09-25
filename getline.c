@@ -11,7 +11,6 @@ char *readcmd(char *command)
 {
 int l, p;
 size_t bufsize = 0;
-char *c = malloc(100);
 p = isatty(STDIN_FILENO);
 if (p == 1)
 {
@@ -39,10 +38,5 @@ if (command[l] == '\n' || command[l] == EOF)
 {
 *(command + l) = '\0';
 }
-if (*command != '/')
-{
-strcpy(c, command);
-strcat(c, "/bin/");
-}
-return (c);
+return (command);
 }
