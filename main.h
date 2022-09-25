@@ -20,7 +20,7 @@ void for_env();
 int check_repeat(char **tokenz);
 int check_builtin(char **tokenz);
 int _strcmp(char *s1, char *s2);
-char **parse_line(char *buffer, char **tokenz, char *c);
+char **parse_line(char *buffer, char **tokenz, char *n);
 int execute(char **token);
 extern char **environ;
 #endif
