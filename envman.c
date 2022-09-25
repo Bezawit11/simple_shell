@@ -1,6 +1,6 @@
 #include "main.h"
 #include <unistd.h>
-
+extern char **environ;
 /**
  *for_env - prints environment variables
  *Return: void
