@@ -46,5 +46,6 @@ tok = strtok(NULL, " ");
 i = i + 1;
 }
 tokenz[i] = NULL;
+free(c);
 return (tokenz);
 }
