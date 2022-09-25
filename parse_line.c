@@ -22,7 +22,7 @@ exit(EXIT_FAILURE);
 strcpy(c, buffer);
 if (*c != '/')
 {
-strcat(c, "/bin/");
+strcat("/bin/", c);
 }
 for (j = 0; c[j] != '\0'; j++)
 {
