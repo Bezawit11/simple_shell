@@ -12,7 +12,7 @@ char **parse_line(char *buffer, char **tokenz, char *n)
 
 {
 int i = 0, size = 64, j, r, l;
-char *tok;
+char *tok = malloc(50);
 tokenz = malloc(size * sizeof(char *));
 l = strlen(buffer);
 n = malloc(l + 5);
@@ -48,5 +48,6 @@ tok = strtok(NULL, " ");
 i = i + 1;
 }
 tokenz[i] = NULL;
+free(tok);
 return (tokenz);
 }
