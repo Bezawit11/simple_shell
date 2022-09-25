@@ -19,7 +19,7 @@ if (tokenz == NULL)
 {
 exit(EXIT_FAILURE);
 }
-if (*c != '/')
+if (*buffer != '/')
 {
 strcpy(c, "/bin/");
 strcat(c, buffer);
