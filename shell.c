@@ -13,25 +13,25 @@ int main(void)
 
 {
 int h = 1, status, p, c;
-char *buffer = NULL, **tokenz, *c;
+char *buffer = NULL, **tokenz, *n;
 /*char ex[100];*/
 pid_t pid;
 while (h == 1)
 {
 p = isatty(STDIN_FILENO);
 buffer = readcmd(buffer);
-tokenz = parse_line(buffer, tokenz, c);
+tokenz = parse_line(buffer, tokenz, n);
 c = check_builtin(tokenz);
 if (c == 0){
 free(buffer);
 free(tokenz);
-free(c);
+free(n);
 break;}
 if (c == 1)
 {
 free(buffer);
 free(tokenz);
-free(c);
+free(n);
 continue;
 }
 pid = fork();
@@ -47,7 +47,7 @@ else
 wait(&status);
 free(buffer);
 free(tokenz);
-free(c);
+free(n);
 if (p != 1)
 h--;
 }
