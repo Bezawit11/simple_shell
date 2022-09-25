@@ -13,22 +13,28 @@ char **parse_line(char *buffer, char **tokenz)
 {
 int i = 0, size = 64, j;
 char *tok;
+char *c = malloc(100);
 tokenz = malloc(size * sizeof(char *));
 if (tokenz == NULL)
 {
 exit(EXIT_FAILURE);
 }
-for (j = 0; buffer[j] != '\0'; j++)
+if (*buffer != '/')
 {
-if (buffer[j] != ' ')
+strcpy(c, buffer);
+strcat(c, "/bin/");
+}
+for (j = 0; c[j] != '\0'; j++)
+{
+if (c[j] != ' ')
 break;
 }
-if (buffer[j] == '\0'){
+if (c[j] == '\0'){
 tokenz[0] = " ";
 tokenz[1] = NULL;
 return (tokenz);
 }
-tok = strtok(buffer, " ");
+tok = strtok(c, " ");
 while (tok != NULL)
 {
 tokenz[i] = tok;
