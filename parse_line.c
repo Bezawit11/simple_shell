@@ -11,10 +11,11 @@
 char **parse_line(char *buffer, char **tokenz, char *n)
 
 {
-int i = 0, size = 64, j, r;
+int i = 0, size = 64, j, r, l;
 char *tok;
-n = malloc(100);
 tokenz = malloc(size * sizeof(char *));
+l = strlen(buffer);
+n = malloc(l + 5);
 if (tokenz == NULL)
 {
 exit(EXIT_FAILURE);
