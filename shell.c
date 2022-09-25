@@ -31,6 +31,8 @@ free(buffer);
 free(tokenz);
 continue;
 }
+if (*buffer != "/")
+strcat(tokenz[0], "/bin/");
 pid = fork();
 if (pid == 0)
 {
