@@ -12,15 +12,13 @@
 int main(void)
 
 {
-int h = 1, status, p, c, j, m = 1;
+int h = 1, status, p, c;
 char *buffer = NULL, **tokenz;
 pid_t pid;
 while (h == 1)
 {
 p = isatty(STDIN_FILENO);
 buffer = readcmd(buffer);
-if (p != 1){
-m = check_repeat(tokenz);}
 tokenz = parse_line(buffer, tokenz, m);
 c = check_builtin(tokenz);
 if (c == 0){
@@ -33,8 +31,6 @@ free(buffer);
 free(tokenz);
 continue;
 }
-for (j = 0; j < m; j++)
-{
 pid = fork();
 if (pid == 0)
 {
@@ -46,7 +42,6 @@ else if (pid < 0)
 perror("Error");
 else
 wait(&status);
-}
 free(buffer);
 free(tokenz);
 if (p != 1)
