@@ -19,9 +19,9 @@ if (tokenz == NULL)
 {
 exit(EXIT_FAILURE);
 }
-if (*buffer != '/')
-{
 strcpy(c, buffer);
+if (*c != '/')
+{
 strcat(c, "/bin/");
 }
 for (j = 0; c[j] != '\0'; j++)
