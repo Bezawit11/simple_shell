@@ -13,7 +13,7 @@ int main(void)
 
 {
 int h = 1, status, p, c;
-char *buffer = NULL, **tokenz, *n;
+char *buffer = NULL, **tokenz, *n = NULL;
 /*char ex[100];*/
 pid_t pid;
 while (h == 1)
