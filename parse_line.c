@@ -8,14 +8,13 @@
  *@buffer: command to be tokenized
  *Return: returns a double poiner of tokenized command
  */
-char **parse_line(char *buffer, char **tokenz, char *n)
+char **parse_line(char *buffer, char **tokenz)
 
 {
-int i = 0, size = 64, j, r, l;
+int i = 0, size = 64, r, j;
 char *tok = malloc(50);
+char n[100];
 tokenz = malloc(size * sizeof(char *));
-l = strlen(buffer);
-n = malloc(l + 5);
 if (tokenz == NULL)
 {
 exit(EXIT_FAILURE);
@@ -47,6 +46,11 @@ tokenz[i] = tok;
 tok = strtok(NULL, " ");
 i = i + 1;
 }
+/*i = 0;
+while (tokenz[i] != NULL){
+printf("%s\n", tokenz[i]);
+i++;
+}*/
 tokenz[i] = NULL;
 free(tok);
 return (tokenz);

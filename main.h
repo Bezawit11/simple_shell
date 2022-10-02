@@ -21,7 +21,7 @@ int check_repeat(char **tokenz);
 int check_builtin(char **tokenz);
 int if_builtin(char *buffer);
 int _strcmp(char *s1, char *s2);
-char **parse_line(char *buffer, char **tokenz, char *n);
+char **parse_line(char *buffer, char **tokenz);
 int execute(char **token);
 extern char **environ;
 #endif
